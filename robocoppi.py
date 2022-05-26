@@ -103,3 +103,46 @@ model.save("model.tflearn")
 #fit our data to the model. The number of epochs we set is the amount of times that the model will see the same information while training. You can change its value to see what happens.
 #save our data to the file model.tflearn for use in other scripts.
 
+def bag_of_words(s, words):
+    bag = [0 for _ in range(len(words))]
+
+    s_words = nltk.word_tokenize(s)
+    s_words = [stemmer.stem(word.lower()) for word in s_words]
+
+    for se in s_words:
+        for i, w in enumerate(words):
+            if w == se:
+                bag[i] = 1
+            
+    return numpy.array(bag)
+
+
+def chat():
+    print("Start talking with the bot (type quit to stop)!")
+    while True:
+        inp = input("You: ")
+        if inp.lower() == "quit":
+            break
+
+        results = model.predict([bag_of_words(inp, words)])[0]
+        results_index = numpy.argmax(results)
+        tag = labels[results_index]
+
+        if results[result_index] > 0.7:
+#This sets the treshold to 70% correctness
+            for tg in data["intents"]:
+                if tg['tag'] == tag:
+                    responses = tg['responses']
+
+            print(random.choice(responses))
+        else:
+            print("I totally hear you. I just can't really wrap my whiskers around it yet.")
+
+chat()
+
+# Get some input from the user
+# It doesn't seem to get beyond this step. Script seems OK (or more outdated elements? in numpy or random packages? No error message though...). Probably something in my sublime or git configuration or settings? I tried so far:  Installed 'Random Everything' (in Sublime Text) and 'Anaconda', as PIP connecting to 1 Python only situation (1 error message to solve left), no change.
+# Convert it to a bag of words
+# Get a prediction from the model
+# Find the most probable class
+# Pick a response from that class
