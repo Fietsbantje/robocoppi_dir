@@ -16,7 +16,7 @@
         },
         {"tag": "name",
          "patterns": ["what is your name", "what should I call you", "whats your name?"],
-         "responses": ["My name is RoboCoppi. I'm really bad at remembering names, but I will do my purring best to remember yours.", "RoboCoppi sono!", "I'm roboCoppi AKA The First Neurodiverse CatBot. It is so nice to meet you!"],
+         "responses": ["My name is robocoppi. I'm really bad at remembering names, but I will do my purring best to remember yours.", "robocoppi sono!", "I'm roboCoppi AKA The First Neurodiverse CatBot. It is so nice to meet you!"],
          "context_set": ""
         },
         {"tag": "food",
