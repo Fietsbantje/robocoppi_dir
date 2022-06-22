@@ -141,7 +141,7 @@ def chat():
 chat()
 
 # Get some input from the user
-# It doesn't seem to get beyond this step. Script seems OK (or more outdated elements? in numpy or random packages? No error message though...). Probably something in my sublime or git configuration or settings? I tried so far:  Installed 'Random Everything' (in Sublime Text) and 'Anaconda', as PIP connecting to 1 Python only situation (1 error message to solve left), no change.
+# It doesn't seem to get beyond this step (script works up to line 101). I went back to the basics and changed to vs code. After getting really confused and trying the following: Installed 'Random Everything' (in Sublime Text) and 'Anaconda', as PIP connecting to 1 Python only situation (1 error message to solve left), no change.
 # Convert it to a bag of words
 # Get a prediction from the model
 # Find the most probable class
