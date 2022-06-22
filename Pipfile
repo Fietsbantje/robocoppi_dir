@@ -4,10 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-numpy = "*"
-tflearn = "*"
-tensorflow = "*"
-nltk = "*"
+numpy = "==1.22.3"
+tflearn = "==0.5.0"
+tensorflow = "==2.8.0"
+nltk = "==3.7"
 
 [dev-packages]
 
