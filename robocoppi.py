@@ -1,22 +1,26 @@
+#import natural language tool kit and the stemmer
+
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 
-#import natural language tool kittens and the stemmer, meow!
+# FIXME - move comments so they precede the relevant code
+
+# import the following packages //FIXME - resolve issues with these packages
 
 import numpy
 import tflearn
 import tensorflow
 import random
 
-#import some other kittens (these are packages, see notes for what they do)
+# import json file with the intents
 
 import json
 
 with open('intents.json') as file:
     data = json.load(file)
-
-#import json file with the intents (this file is a dictionairy/object that contains dictionaries/objects for every 'tag'=intent, which contain nested lists of 'patterns'=training phrases and 'responses')
+    
+#preprocessing of the data : tokenize, create lists for words and add tags to the intents
 
 words = []
 labels = []
@@ -33,7 +37,7 @@ for intent in data['intents']:
     if intent['tag'] not in labels:
         labels.append(intent['tag'])
 
-#preprocessing of the data : tokenize, create lists for words and tags (of the existing intents) and add new tags (for new intents)
+
 
 words = [stemmer.stem(w.lower()) for w in words if w != "?"]
 words = sorted(list(set(words)))
@@ -103,6 +107,8 @@ model.save("model.tflearn")
 #fit our data to the model. The number of epochs we set is the amount of times that the model will see the same information while training. You can change its value to see what happens.
 #save our data to the file model.tflearn for use in other scripts.
 
+# TODO - review following code
+
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))]
 
@@ -128,7 +134,7 @@ def chat():
         results_index = numpy.argmax(results)
         tag = labels[results_index]
 
-        if results[result_index] > 0.7:
+        if results[results_index] > 0.7:
 #This sets the treshold to 70% correctness
             for tg in data["intents"]:
                 if tg['tag'] == tag:
