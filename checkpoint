@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/coppi/robocoppi_dir/model.tflearn"
+all_model_checkpoint_paths: "/home/coppi/robocoppi_dir/model.tflearn"
