@@ -139,7 +139,6 @@ def chat():
 # Find the most probable intent.
 # Pick a response from that intent randomly.
 
-
         if results[results_index] > 0.7:
             for tag in data["intents"]:
                 if tag['intent_name_tag'] == prediction:
