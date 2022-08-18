@@ -123,7 +123,7 @@ def bag_of_words(input_message, words):
 # If input is 'basta' stop the program.
 
 def chat():
-    print("Talk to me whenever you are ready! Type basta to stop")
+    print("Talk to me whenever you are ready! Type basta to stop.")
     while True:
         input_message = input("You: ")
         if input_message.lower() == "basta":
