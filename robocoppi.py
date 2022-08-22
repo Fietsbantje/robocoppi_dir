@@ -146,6 +146,7 @@ def chat():
 
             print(random.choice(responses))
         else:
-            print("I totally hear you. I just can't really wrap my whiskers around it yet.")
+            import fallback_messages
+            print(fallback_messages.fallback_message())
 
 chat()
