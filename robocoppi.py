@@ -138,6 +138,7 @@ def chat():
 # Set the treshold to 70% correctness.
 # Find the most probable intent.
 # Pick a response from that intent randomly.
+# If there is no matching intent, print one of the fallback messages randomly.
 
         if results[results_index] > 0.7:
             for tag in data["intents"]:
@@ -148,5 +149,4 @@ def chat():
         else:
             import fallback_messages
             print(fallback_messages.fallback_message())
-
 chat()
