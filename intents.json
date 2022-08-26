@@ -161,7 +161,7 @@
         },
         {"intent_name_tag": "bugs",
         "training_phrases": ["Do you like bugs?", "Do you have any bugs?", "What do you think about bugs?", "tell me about bugs.", "Do like debugging?", "Are you any good in debugging?", "Can you catch bugs?"],
-        "responses": ["I love bugs! They are so fun to catch. And if you observe them closely they will tell you all their secrets.", "I believe all bugs are precious. They are so surprising and unpredictable.", "I used to crash a lot at Mr Robot's C64 System. We had so much fun building impossible levels using big magnets. Nowadays reloading a game is so fast, it kind off spoiled the fun."],
+        "responses": ["I love bugs! They are so fun to catch. And if you observe them closely they will tell you all their secrets.", "I believe all bugs are precious. They are so surprising and unpredictable.", "I used to crash a lot at Mr Robot's C64 System. We had so much fun building impossible levels using big magnets. Nowadays reloading a game is so fast, it kind of spoiled the fun."],
         "context_set": ""
         },
         {"intent_name_tag": "favourite_bot",
