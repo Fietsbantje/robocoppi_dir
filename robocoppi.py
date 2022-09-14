@@ -37,10 +37,10 @@ for intent in data['intents']:
     if intent['intent_name_tag'] not in intent_names:
         intent_names.append(intent['intent_name_tag'])
 
-# Create a list of all the unique stemmed words (turn all the words into lower case, use a set for getting the unique values and get the stem of all the words). Questionmarks are not words. //TODO add esclamation marks/... to these exceptions.
+# Create a list of all the unique stemmed words (turn all the words into lower case, use a set for getting the unique values and get the stem of all the words). Question marks are not words. //TODO add esclamation marks and ... to these exceptions.
 # The order of the words in the sentence is lost, but the lists 'words' and 'intent_names' are sorted. Robocoppi only knows the presence of words in his model's vocabulary, not their order in the sentence.
 
-words = [stemmer.stem(word.lower()) for word in words if word != "?"]
+words = [stemmer.stem(word.lower()) for word in words if word != "?" and word != "!"]
 words = sorted(list(set(words)))
 
 intent_names = sorted(intent_names)
@@ -50,7 +50,7 @@ intent_names = sorted(intent_names)
 training = []
 output = []
 
-# The output lists are the length of how many intent names there are. Looping through those lists the value is set to 0 for each intent_name.
+# The output lists are the length of the amount of intent names. Looping through those lists the value is set to 0 for each intent_name.
 # Hence every intent_name in our output has a value of 0 to start with.
 # Represent each sentence with the length of the amount of words in our models vocabulary.
 # Each position in the list will represent a word from our vocabulary.
