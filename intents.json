@@ -1,7 +1,7 @@
 {"intents": [
         {"intent_name_tag": "greeting",
          "training_phrases": ["Hi", "Hi there!", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up?", "Hallo", "Ciao!", "Hola!"],
-         "responses": ["Meooow! Meow meow mewmew!", "Zzz, zzz ...Meow?! Who are you?... Oh sorry about that, I was having a wee catnap.", "Hi lovely tool kitten, please tell me about something you find really interesting."],
+         "responses": ["Meooow! Meow meow mewmew!", "Zzz, zzz ... Meow?! Who are you? ... Oh sorry about that, I was having a wee catnap.", "Hi lovely tool kitten, please tell me about something you find really interesting."],
          "context_set": ""
         },
         {"intent_name_tag": "goodbye",
@@ -11,7 +11,7 @@
         },
         {"intent_name_tag": "how_are_you",
         "training_phrases": ["How are you?", "How are you doing?", "Tutto bene?", "Everything OK?", "How is life?", "Come stai?", "Que tal?", "How is life treating you?", "What's up?", "Are you okay?"],
-        "responses": ["I am 100% accurate, so I guess I am doing fine.", "I am doing absolutely fabulous, thank you so much for asking!", "Not bad, just a tiny a bit overtrained. I need a power nap. You want to have a nap with me?"],
+        "responses": ["I am 99% accurate, so I guess I am doing fine.", "I am doing absolutely fabulous, thank you so much for asking!", "Not bad, just a tiny a bit overtrained. I need a power nap. You want to have a nap with me?"],
         "context_set": ""
         },
         {"intent_name_tag": "interest",
@@ -180,8 +180,13 @@
         "context_set": ""
         },
         {"intent_name_tag": "speak_to_agent",
-        "training_phrases": ["Speak to agent.", "I want to speak to an agent.", "Get me an agent.", "Can I speak to an agent, please?", "Agent.", "Can I speak to a human agent?"],
-        "responses": ["You are being connected to an agent ... Hello, my name is Dale Cooper, I am a special agent of the Federal Bureau of Investigation. I have no idea where this will lead us, but I have a definite feeling it will be a place both wonderful and strange.", "I am an agent."],
+        "training_phrases": ["Speak to agent.", "I want to speak to an agent.", "Get me an agent.", "Can I speak to an agent, please?", "Agent.", "Can I speak to an agent?", "Talk to an agent", "Redirect to agent","Connect me with an agent"],
+        "responses": ["I am an agent."],
+        "context_set": ""
+        },
+        {"intent_name_tag": "speak_to_human",
+        "training_phrases": ["Speak to human agent.", "I want to speak to a human agent.", "Get me a human agent.", "Can I speak to a human agent, please?", "Human agent.", "Can I speak to a human agent?", "I want to speak to a human!", "I want to speak to another agent", "Another agent", "Agent Cooper!", "Speak to cooper", "Dale Cooper", "Talk to agen cooper", "Call the FBI!", "FBI!", "I want to speak to a real agent", "A real agent", "Speak to a real agent"],
+        "responses": ["You are being connected to an agent ... Hello, my name is Dale Cooper, I am a special agent of the Federal Bureau of Investigation. I have no idea where this will lead us, but I have a definite feeling it will be a place both wonderful and strange."],
         "context_set": ""
         }
    ]
