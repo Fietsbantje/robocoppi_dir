@@ -188,6 +188,11 @@
         "training_phrases": ["Speak to human agent.", "I want to speak to a human agent.", "Get me a human agent.", "Can I speak to a human agent, please?", "Human agent.", "Can I speak to a human agent?", "I want to speak to a human!", "I want to speak to another agent", "Another agent", "Agent Cooper!", "Speak to cooper", "Dale Cooper", "Talk to agen cooper", "Call the FBI!", "FBI!", "I want to speak to a real agent", "A real agent", "Speak to a real agent"],
         "responses": ["You are being connected to an agent ... Hello, my name is Dale Cooper, I am a special agent of the Federal Bureau of Investigation. I have no idea where this will lead us, but I have a definite feeling it will be a place both wonderful and strange."],
         "context_set": ""
+        },
+        {"intent_name_tag": "play_a_game",
+        "training_phrases": ["Play a game", "I want to play a game", "Shall we play a game?", "Do you want to play a game?", "The game of life.", "Conway's game of life.", "I love games.", "Do you like games?", "What is your favourite game?", "Game on!", "Run game."],
+        "responses": ["I love games! Especially The Game of Life. I play it all the time. Here is a link to a version for humans: https://conwayoflife.com"],
+        "context_set": ""
         }
    ]
 }
