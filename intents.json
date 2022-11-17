@@ -193,6 +193,11 @@
         "training_phrases": ["Play a game", "I want to play a game", "Shall we play a game?", "Do you want to play a game?", "The game of life.", "Conway's game of life.", "I love games.", "Do you like games?", "What is your favourite game?", "Game on!", "Run game."],
         "responses": ["I love games! Especially The Game of Life. I play it all the time. Here is a link to a version for humans: https://conwayoflife.com"],
         "context_set": ""
+        },
+        {"intent_name_tag": "just_a_glitch",
+        "training_phrases": ["your performance is so bad", "you are stupid", "you are broken", "you don't work properly", "you are dumb", "you don't understand anything", "stupid chatbot!", "you are so silly", "you are a stupid chatbot!", "are you dangerous?", "you look dangerous", "are you going to kill me?", "don't hurt me!", "don't shoot!"],
+        "responses": ["Don't worry, I am just a glitch"],
+        "context_set": ""
         }
    ]
 }
