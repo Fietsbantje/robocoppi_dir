@@ -1,47 +1,67 @@
-## In his own words  
-we are RoboCoppi  
-we are a chatbot that chats about chatbots  
-we don't know everything, we are learning  
-please feel free to ask us about our structure though   
-or anything else you would like to know  
-we are open-source, independent and free  
-you can even have a look at our hidden layers  
-or ask what is in our bag of words  
-we are happy to share what we know  
-we are created by Antje van Oosten and Fausto Coppi  
-we will have continuous integrations and manifestations  
-please feel free to clone us and make your own customized bot    
+## The back end
 
-## The RoboCoppi Project  
-RoboCoppi is a free, independent and open-source chatbot. His goal is to eliminate stress and deadlines and to share his code with the world. He aims at learning continuously and he battles with human words. He is data-driven and over-particular about his food. This project doesn't have an end date, or as RoboCoppi likes to say: "It's a giro, not a sprint!".  
+This repo provides the **Python** code for building the back end of a machine learning chat bot. 
+The machine learning model of this bot was built using **Tensorflow**, an open-source platform for machine learning:  
 
-RoboCoppi is recycled out of open-source objects. Links to the original code/tutorials are provided in the README for every repository.  
+https://www.tensorflow.org/overview
 
-The aim of this GitHub project is providing the code and open source tutorials for building and deploying an AI assistant from scratch. It is intended for enthusiastic self-taught humans without a degree in computer science or anyone else who wants to understand how to communicate with a computer. Every repository in this account contains a part or version of RoboCoppi and can also be used independently, for those who just want to learn about one of his parts or compare different deep learning models.
+It also uses **nltk**, a platform for building Python programs working with human language data.
 
-## Credits and links
-For this first repository, RoboCoppi 01, I followed this tutorial:
-https://www.techwithtim.net/tutorials/ai-chatbot/
+https://www.nltk.org/index.html
 
-I made some changes to get it to work, as this tutorial is a bit dated by the time I am writing this. I used VS Code as a code editor and created a Conda evironment to solve some issues with the Python packages. I changed all the variable names to more explanatory names, in accordance with the current terminology within the domain of Conversation Design. I hope this all helps in getting a better understanding of how it works and in providing a shortcut for others.
+## Credits and links  
 
-The tutorial wasn't designed for beginners and having knowledge of Python is essential to really understand this code. I have a preference for hands-on learning though and this tutorial turned out to be great for that. I also followed a few open-source tutorials to learn Python, created by the same teacher (Tim Ruscica aka Tech with Tim) and eventually his ProgrammingExpert Course at AlgoExpert. The RoboCoppi Project is independent and doesn't use any kind of advertising. I am only sharing the resources I used. I would advise anyone to try out some open-source tutorials/apps to see what works for you.
+For this first repository, robocoppi_dir, I followed this tutorial:  
 
-If you get this chatbot to work, you have learned:
+https://www.techwithtim.net/tutorials/ai-chatbot/  
 
-How to use the Command Line Interface  
-How to create a coding environment  
-How to use a code editor  
-How to install/import packages  
-How to debug  
-How to build a deep learning model with Tensorflow  
-How to build and train the back end of a chatbot  
+I made some changes to get it to work, as this tutorial is a bit dated by the time I am writing this:
 
-Tip: check the official documentation of the command line interface, coding environment, packages, code editor and programming language you use. It might seem more work than getting a quick fix on Stackoverflow, but in the end it will save you time.  
+I used VS Code as a code editor and created a Conda environment to solve some issues with the Python packages. 
+I changed all the variable names to more explanatory names, in accordance with the current terminology within the domain of Conversation Design.  
 
-## RoboCoppi artwork
+The tutorial wasn't designed for beginners and having knowledge of Python is essential to really understand this code. 
+I followed a few open-source tutorials to learn Python, created by the same teacher (Tim Ruscica aka Tech with Tim) and eventually his ProgrammingExpert Course at AlgoExpert.  
 
-The GitHub persona of RoboCoppi 01 was designed by Stellar (Steve Napier):  
+## RoboCoppi artwork  
+
+The GitHub persona of RoboCoppi was designed by Stellar (Steve Napier):  
 https://instagram.com/stellar_steve_napier?igshid=YmMyMTA2M2Y=  
+
+## Initial Setup 
+
+Clone repo  
+```
+$ git clone https://github.com/Fietsbantje/robocoppi_dir.git  
+$ cd robocoppi_dir
+```
+Use **Conda** to create an environment and then activate it.  
+In the following example the name of the environment is coppi-env and the Python version used is 3.10  
+```
+$ conda create --name coppi-env python=3.10  
+$ conda activate coppi-env  
+```
+Install packages: 
+You can use **Pip** in a Conda environment. Pip is included in Anaconda and Miniconda. 
+Note that you can't use 'conda install' after 'pip install'. First install what you want to install with Conda. After that install packages that can't be installed with Conda, using pip.  
+```
+$ (coppi-env) conda install -c anaconda numpy nltk tflearn
+$ (coppi-env) pip install tensorflow
+```
+Import nltk package and download punkt.
+Note that you type this in the **Python Interpreter** (the $ in the prompt changes in >>>). 
+Typing python (or python3 on Linux) in the Command Line will activate the Python interpreter and you can get back to the Command Line prompt typing CTRL + d
+```
+$ (coppi-env) python  
+>>> import nltk  
+>>> nltk.download('punkt')  
+```
+Modify intents.json with different intents and responses for your Chatbot  
+
+Run 
+```
+$ (venv) python robocoppi.py  
+```
+This will dump model.tflearn.data file. 
 
 
